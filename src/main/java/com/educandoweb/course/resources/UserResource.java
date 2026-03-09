@@ -16,6 +16,7 @@ public class UserResource {
 	
 	@GetMapping
 	public ResponseEntity<List<User>> findAll(){
+		
 		List<User> list = new ArrayList<>();
 		
 		User user = new User(1L, "Bob", "bob@email.com", "9999999", "1213424");
