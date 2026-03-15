@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import com.educandoweb.course.entities.Order;
 import com.educandoweb.course.entities.Product;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
@@ -14,7 +15,8 @@ import jakarta.persistence.ManyToOne;
 public class OrdemItemPk implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-
+	
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "order_id")
 	private Order order;
@@ -23,6 +25,8 @@ public class OrdemItemPk implements Serializable {
 	@JoinColumn(name = "product_id")
 	private Product product;
 	
+	
+	@JsonIgnore
 	public Order getOrder() {
 		return order;
 	}

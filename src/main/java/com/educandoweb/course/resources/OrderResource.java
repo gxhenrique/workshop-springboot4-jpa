@@ -30,6 +30,10 @@ public class OrderResource {
 	public ResponseEntity<Order> findById(@PathVariable Long id) {
 
 		Order obj = service.findById(id);
+		
+		if(obj == null) {
+			throw new RuntimeException("Order item não encontrado");
+		}
 		return ResponseEntity.ok().body(obj);
 
 	}
