@@ -88,7 +88,7 @@ public class Order implements Serializable {
 		this.orderStatus = orderStatus.getCode();
 	}
 	
-	@JsonIgnore
+	
 	public Set<OrderItem> getItems(){
 		return items;
 	}

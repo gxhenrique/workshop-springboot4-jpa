@@ -16,7 +16,7 @@ public class OrdemItemPk implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@JsonIgnore
+	
 	@ManyToOne
 	@JoinColumn(name = "order_id")
 	private Order order;
@@ -30,6 +30,7 @@ public class OrdemItemPk implements Serializable {
 	public Order getOrder() {
 		return order;
 	}
+	
 	public void setOrder(Order order) {
 		this.order = order;
 	}
